@@ -1,0 +1,12 @@
+pkgbase = obs-websocket-bin
+	pkgdesc = Remote-control of OBS Studio through WebSocket
+	pkgver = 4.9.1
+	pkgrel = 1
+	url = https://github.com/obsproject/obs-websocket
+	arch = x86_64
+	license = GPL
+	depends = obs-studio>=27.0.0
+	source = https://github.com/obsproject/obs-websocket/releases/download/4.9.1/obs-websocket_4.9.1-1_amd64.deb
+	sha512sums = d288509a201ad50cfb725af6f4a85fc02a26c45eef360e1192f5789c84146672178235a5ff537822c7f2595cb333d539b1de06840fa156747d7a0b4823a7ecb8
+
+pkgname = obs-websocket-bin
