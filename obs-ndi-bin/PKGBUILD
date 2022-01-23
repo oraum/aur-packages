@@ -1,0 +1,18 @@
+
+pkgname=obs-ndi-bin
+pkgver=4.9.1
+pkgrel=1
+pkgdesc="Newtek NDI Support for OBS"
+arch=('x86_64')
+url="https://github.com/Palakis/obs-ndi"
+license=('GPL2')
+depends=("obs-studio>=27.0.0")
+
+source=("https://github.com/Palakis/obs-ndi/releases/download/${pkgver}/obs-ndi_${pkgver}-1_amd64.deb")
+sha512sums=('1cb7f1e61f1c5e42c1e6950fdf0aeef0f2c9a790e270b3ede1a17bd9b627494bd694aba4d4c0f428de4c8864ccf91d5108bfb1d8a5d3bc7477320e7523aeeea6')
+
+package() {
+	echo "  -> Extracting the data.tar.xz..."
+	bsdtar -xf data.tar.xz -C "$pkgdir/"
+	chmod 755 "$pkgdir"/usr/share
+}
